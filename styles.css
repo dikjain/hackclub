@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+*{
+    border: 1px solid black;    
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-out;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff6ec4, #7873f5, #ffcc00, #00ffcc);
+    animation: gradientAnimation 5s ease infinite;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+    animation: moveCircle 4s infinite alternate;
+}
+
+.square {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 150px solid rgba(255, 255, 255, 0.7);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+
+.star {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+    animation: moveStar 4.5s infinite alternate;
+}
+
+.heart {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+    animation: moveStar 4.5s infinite alternate;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.3);
+    clip-path: polygon(0 70%, 100% 30%, 100% 100%, 0% 100%);
+    animation: waveAnimation 2.5s infinite linear;
+}
+
+.hexagon {
+    position: absolute;
+    width: 150px;
+    height: 86.6px;
+    background: rgba(255, 255, 255, 0.7);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.pentagon {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.octagon {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.diamond {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.parallelogram {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.7);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.trapezoid {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.7);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.crescent {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    box-shadow: -30px 0 0 0 rgba(0, 0, 0, 0.7);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.cross {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    clip-path: polygon(35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%, 0% 35%, 35% 35%);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.arrow {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    clip-path: polygon(50% 0%, 100% 50%, 75% 50%, 75% 100%, 25% 100%, 25% 50%, 0% 50%);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.ellipse {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.rhombus {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.kite {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.spiral {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+    background-image: radial-gradient(circle, transparent 20%, rgba(255, 255, 255, 0.7) 20%);
+    background-size: 20px 20px;
+}
+
+.starburst {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    clip-path: polygon(50% 0%, 60% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.container > div:hover {
+    transform: scale(1.5) rotate(360deg);
+    background: rgba(255, 255, 255, 1);
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
